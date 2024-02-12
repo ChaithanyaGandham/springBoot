@@ -1,15 +1,17 @@
 package com.example.demo.model;
 
-import org.springframework.context.annotation.Scope;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(value="prototype")
 public class Customer {
 	
 	private int id;
 	private String name;
 	private int age;
+	
+	@Autowired
+	private Laptop laptop;
 	
 	public Customer() {
 		super();
@@ -35,7 +37,8 @@ public class Customer {
 	}
 	
 	public void show() {
-		System.out.println("in show!");
+		System.out.println("in show");
+		laptop.compile();
 	}
 
 }

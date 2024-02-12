@@ -14,10 +14,6 @@ public class SpringBootProjectApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(SpringBootProjectApplication.class, args);
 		Customer cust = context.getBean(Customer.class);
 		cust.show();
-		
-		Customer cust1 = context.getBean(Customer.class);
-		cust1.show();
-		
 	}
 
 }
